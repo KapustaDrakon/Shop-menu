@@ -12,11 +12,11 @@
         <li class="nav__lang">
           <button type="button" class="nav__button-lang">
             <img src="img/earth.svg" alt="earth" />
-            <div class="button-lang__wrapper">
+            <span class="button-lang__wrapper">
               <span class="nav__button-lang-ru">RU</span>
               <div class="nav__line"></div>
               <span class="nav__button-lang-en">EN</span>
-            </div>
+            </span>
           </button>
         </li>
         <li class="nav__place-and-phone">
@@ -45,27 +45,29 @@
 
     <header class="header">
       <ul class="header__buttons-mobile">
-        <div class="header__wrapper">
-          <li class="header__buttons-wrapper">
-            <input
-              type="checkbox"
-              class="header__button-menu"
-              id="header__button-menu-mobile"
-            />
-            <button type="button" class="header__button-hunt"></button>
-          </li>
-          <li class="header__logo-mobile">
-            <a href="#"
-              ><img src="img/logo.svg" alt="logo" class="header__logo-image"
-            /></a>
-          </li>
-          <li class="header__buttons-wrapper">
-            <button type="button" class="header__button-heart"></button>
-            <button type="button" class="header__button-chest">
-              <div class="button-chest__count">20</div>
-            </button>
-          </li>
-        </div>
+        <li>
+          <ul class="header__wrapper">
+            <div class="header__buttons-wrapper">
+              <input
+                type="checkbox"
+                class="header__button-menu"
+                id="header__button-menu-mobile"
+              />
+              <button type="button" class="header__button-hunt"></button>
+            </div>
+            <div class="header__logo-mobile">
+              <a href="#"
+                ><img src="img/logo.svg" alt="logo" class="header__logo-image"
+              /></a>
+            </div>
+            <div class="header__buttons-wrapper">
+              <button type="button" class="header__button-heart"></button>
+              <button type="button" class="header__button-chest">
+                <div class="button-chest__count">20</div>
+              </button>
+            </div>
+          </ul>
+        </li>
 
         <li>
           <form class="header__form" id="header__form">
