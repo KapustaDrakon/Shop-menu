@@ -11,9 +11,11 @@ document.addEventListener("scroll", () => {
 
 // Определяю мобилка или десктоп
 
-let mobile;
-if (window.innerWidth < 1298) mobile = true;
-else mobile = false;
+const checkMobile = () => {
+if (window.innerWidth < 1298) return true;
+else return false;
+}
+
 
 // Отрыть/закрыть МЕНЮ (MOBILE)
 const menuButtonMobile = document.getElementById("header__button-menu-mobile");
@@ -78,7 +80,7 @@ const backButtonCatalog = document.getElementById("catalog__button-back");
 const catalogButton = document.getElementById("menu__button-catalog");
 
 catalogButton.addEventListener("click", () => {
-  if (mobile) {
+  if (checkMobile()) {
     if (catalog.classList.contains("catalog_display")) {
       catalog.classList.remove("catalog_display");
     } else {
@@ -108,7 +110,7 @@ const giftSetsButtons = document.querySelectorAll(".menu__button-gift-sets");
 
 giftSetsButtons.forEach((el) =>
   el.addEventListener("click", () => {
-    if (mobile) {
+    if (checkMobile()) {
       if (giftSets.classList.contains("gift-sets_display")) {
         giftSets.classList.remove("gift-sets_display");
         
@@ -153,7 +155,7 @@ const backButtonForWhom = document.getElementById('for-whom__button-back');
 const forWhomButton = document.getElementById('for-whom__button');
 
 forWhomButton.addEventListener('click', () => {
-    if (mobile) {
+    if (checkMobile()) {
     if (forWhom.classList.contains("for-whom_display")) {
       forWhom.classList.remove("for-whom_display");
     } else {
@@ -181,7 +183,7 @@ const backButtonEvents = document.getElementById('events__button-back');
 const eventsButtons = document.querySelectorAll('.menu__button-events');
 
 eventsButtons.forEach((el) => el.addEventListener('click', () => {
-  if (mobile) {
+  if (checkMobile()) {
       if (events.classList.contains("events_display")) {
         events.classList.remove("events_display");
       } else {  
@@ -218,7 +220,7 @@ const backButtonPhones = document.getElementById("catalog-phones__button-back");
 const phonesButton = document.getElementById("catalog-phones__phones");
 
 phonesButton.addEventListener("click", () => {
-  if (mobile) {
+  if (checkMobile()) {
     if (phones.classList.contains("catalog-phones_display")) {
       phones.classList.remove("catalog-phones_display");
     } else {
@@ -247,7 +249,7 @@ const backButtonGadgets = document.getElementById(
 const gadgetsButton = document.getElementById("catalog-phones__gadgets");
 
 gadgetsButton.addEventListener("click", () => {
-  if (mobile) {
+  if (checkMobile()) {
     if (gadgets.classList.contains("catalog-gadgets_display")) {
       gadgets.classList.remove("catalog-gadgets_display");
     } else {

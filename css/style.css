@@ -947,7 +947,7 @@ input {
     justify-content: space-between;
   }
 
-  .header__navigation ul div {
+  .header__navigation ul li ul {
     display: flex;
     gap: 18.5px;
   }
