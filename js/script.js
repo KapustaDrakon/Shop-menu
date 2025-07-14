@@ -12,10 +12,9 @@ document.addEventListener("scroll", () => {
 // Определяю мобилка или десктоп
 
 const checkMobile = () => {
-if (window.innerWidth < 1298) return true;
-else return false;
-}
-
+  if (window.innerWidth < 1298) return true;
+  else return false;
+};
 
 // Отрыть/закрыть МЕНЮ (MOBILE)
 const menuButtonMobile = document.getElementById("header__button-menu-mobile");
@@ -61,8 +60,8 @@ menuButtonDesktop.addEventListener("click", () => {
     forWhom.classList.remove("for-whom_display");
     phones.classList.remove("catalog-phones_display");
     gadgets.classList.remove("catalog-gadgets_display");
-    catalogs.classList.remove('main__catalogs_left-258px');
-    catalogs.classList.remove('main__catalogs_left-737px');
+    catalogs.classList.remove("main__catalogs_left-258px");
+    catalogs.classList.remove("main__catalogs_left-737px");
   } else {
     catalogs.classList.add("main__catalogs_display");
     catalog.classList.add("catalog_display");
@@ -113,9 +112,7 @@ giftSetsButtons.forEach((el) =>
     if (checkMobile()) {
       if (giftSets.classList.contains("gift-sets_display")) {
         giftSets.classList.remove("gift-sets_display");
-        
       } else {
-        
         giftSets.classList.add("gift-sets_display");
         menu.classList.remove("main__menu_display");
       }
@@ -123,7 +120,7 @@ giftSetsButtons.forEach((el) =>
       if (giftSets.classList.contains("gift-sets_display")) {
         menuButtonDesktop.click();
         menuButtonDesktop.classList.remove("header__button-menu_active");
-        
+
         // giftSets.classList.remove("gift-sets_display");
         // containerCatalogs.classList.remove("main__catalogs_display");
         // forWhom.classList.remove("for-whom_display");
@@ -131,7 +128,7 @@ giftSetsButtons.forEach((el) =>
         menuButtonDesktop.click();
         containerCatalogs.classList.add("main__catalogs_display");
         giftSets.classList.add("gift-sets_display");
-        catalogs.classList.add('main__catalogs_left-258px');
+        catalogs.classList.add("main__catalogs_left-258px");
 
         catalog.classList.remove("catalog_display");
         phones.classList.remove("catalog-phones_display");
@@ -150,12 +147,12 @@ backButtonGiftSets.addEventListener("click", () => {
 
 // Открыть/закрыть КАТАЛОГ КОМУ
 
-const forWhom = document.querySelector('.for-whom');
-const backButtonForWhom = document.getElementById('for-whom__button-back');
-const forWhomButton = document.getElementById('for-whom__button');
+const forWhom = document.querySelector(".for-whom");
+const backButtonForWhom = document.getElementById("for-whom__button-back");
+const forWhomButton = document.getElementById("for-whom__button");
 
-forWhomButton.addEventListener('click', () => {
-    if (checkMobile()) {
+forWhomButton.addEventListener("click", () => {
+  if (checkMobile()) {
     if (forWhom.classList.contains("for-whom_display")) {
       forWhom.classList.remove("for-whom_display");
     } else {
@@ -164,29 +161,30 @@ forWhomButton.addEventListener('click', () => {
     }
   } else {
     if (forWhom.classList.contains("for-whom_display")) {
-        forWhom.classList.remove("for-whom_display");
+      forWhom.classList.remove("for-whom_display");
     } else {
-        forWhom.classList.add("for-whom_display");
+      forWhom.classList.add("for-whom_display");
     }
   }
 });
 
-backButtonForWhom.addEventListener('click', () => {
-    forWhom.classList.remove("for-whom_display");
-    giftSets.classList.add("gift-sets_display");
-})
+backButtonForWhom.addEventListener("click", () => {
+  forWhom.classList.remove("for-whom_display");
+  giftSets.classList.add("gift-sets_display");
+});
 
 // Открыть/закрыть КАТАЛОГ СОБЫТИЙ
 
-const events = document.querySelector('.events');
-const backButtonEvents = document.getElementById('events__button-back');
-const eventsButtons = document.querySelectorAll('.menu__button-events');
+const events = document.querySelector(".events");
+const backButtonEvents = document.getElementById("events__button-back");
+const eventsButtons = document.querySelectorAll(".menu__button-events");
 
-eventsButtons.forEach((el) => el.addEventListener('click', () => {
-  if (checkMobile()) {
+eventsButtons.forEach((el) =>
+  el.addEventListener("click", () => {
+    if (checkMobile()) {
       if (events.classList.contains("events_display")) {
         events.classList.remove("events_display");
-      } else {  
+      } else {
         events.classList.add("events_display");
         menu.classList.remove("main__menu_display");
       }
@@ -198,7 +196,7 @@ eventsButtons.forEach((el) => el.addEventListener('click', () => {
         menuButtonDesktop.click();
         containerCatalogs.classList.add("main__catalogs_display");
         events.classList.add("events_display");
-        catalogs.classList.add('main__catalogs_left-737px');
+        catalogs.classList.add("main__catalogs_left-737px");
 
         catalog.classList.remove("catalog_display");
         phones.classList.remove("catalog-phones_display");
@@ -207,12 +205,13 @@ eventsButtons.forEach((el) => el.addEventListener('click', () => {
         menuButtonDesktop.classList.add("header__button-menu_active");
       }
     }
-}));
+  })
+);
 
-backButtonEvents.addEventListener('click', () => {
+backButtonEvents.addEventListener("click", () => {
   events.classList.remove("events_display");
   menu.classList.add("main__menu_display");
-})
+});
 
 // Отрыть/закрыть КАТАЛОГ СМАТФОНОВ
 const phones = document.querySelector(".catalog-phones");

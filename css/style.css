@@ -74,7 +74,8 @@ input {
 
 .nav__button {
   display: flex;
-  align-items: flex-start;
+  display: -webkit-flex;
+  /* align-items: flex-start; */
   gap: 4px;
 }
 .nav__button:hover {
@@ -345,7 +346,7 @@ input {
 .menu__place {
   color: #343a3f;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 8px;
 }
 .menu__place:hover {
@@ -483,7 +484,9 @@ input {
 
 .menu__button-wrapper {
   display: flex;
+  display: -webkit-flex;
   align-items: center;
+  -webkit-align-items: center;
   gap: 17px;
 }
 
@@ -706,7 +709,7 @@ input {
 
   .nav__button {
     display: flex;
-    align-items: flex-start;
+    /* align-items: flex-start; */
     gap: 4px;
   }
 
