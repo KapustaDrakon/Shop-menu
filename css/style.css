@@ -24,7 +24,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #000000;
+  color: #343a3f;
 }
 
 button {
@@ -441,6 +441,11 @@ input {
   height: 24px;
   background: url("../img/plus.svg") center no-repeat;
 }
+.button-build__plus-image-desktop {
+  width: 16px;
+  height: 16px;
+  background: url("../img/plus-desktop.svg") center no-repeat;
+}
 
 .menu__nav-buttons {
   display: flex;
@@ -468,6 +473,9 @@ input {
 .menu__button-build:hover {
   color: #ffffff;
   background: #4888ff;
+}
+.header__button-build:hover .button-build__plus-image-desktop {
+  background: url("../img/plus-desktop-hover.svg") center no-repeat;
 }
 .menu__button-build:hover .button-build__plus-image {
   background: url("../img/plus-hover.svg") center no-repeat;
@@ -956,6 +964,9 @@ input {
   }
 
   .header__nav-button {
+    font-family: "Maza Regular";
+    font-size: 16px;
+    color: #343a3f;
     height: 42px;
     background: #f4f4f4;
     border-radius: 8px;
@@ -996,6 +1007,10 @@ input {
   }
 
   .header__button-build {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
     font-family: "Maza Regular";
     font-size: 16px;
     width: 176px;
